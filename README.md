@@ -182,3 +182,162 @@ This analysis supports a **mean-reversion strategy** centered around **neutral e
 * 📅 Greed/Fear Index Classification
 
 
+Here is a **professional README.md** for your Bitcoin Fear-Greed Streamlit dashboard project, based on your provided structure and deployment details.
+
+---
+
+
+
+
+## 📁 Project Structure
+
+```bash
+Bitcoin-analysis/
+│
+├── 📂 Charts/                             # Saved visualizations (PNL, Heatmaps, etc.)
+├── 📄 bitcoin_app.py                      # Streamlit app entry point
+├── 📄 Bitcoin_Analysis (2).ipynb          # Jupyter notebook for EDA and model logic
+├── 📄 merged_bitcoin_trades_sentiment (2).csv  # Main dataset (combined)
+├── 📄 fear_greed_index.csv                # Raw Fear-Greed Index data
+├── 📄 historical_data.csv                 # Historical Bitcoin OHLCV + volume
+├── 📄 requirements.txt                    # Python dependencies
+├── 📄 .gitignore
+├── 📄 LICENSE
+└── 📄 README.md                           # Project report (this file)
+```
+
+---
+
+## 🧠 Project Overview
+
+### 📌 Objective
+
+To analyze how public sentiment (Fear & Greed Index) correlates with trading behaviors and visualize:
+
+* Classification of market sentiment
+* Buy/Sell signals under emotional triggers
+* Strategy simulation based on sentiment
+* Profit & Loss patterns
+
+### 📈 Data Sources
+
+* **Fear-Greed Index**: Measures market emotion on a scale from 0 (Extreme Fear) to 100 (Extreme Greed).
+* **Trade Logs**: Contains trade timestamps, price, volume, and sides (BUY/SELL).
+* **Merged Dataset**: Combined above sources by timestamp into: `merged_bitcoin_trades_sentiment (2).csv`
+
+---
+
+## 💻 How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/ManavChauhan123/Bitcoin-analysis.git
+cd Bitcoin-analysis
+```
+
+### 2️⃣ Create & activate virtual environment (optional)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Launch the app
+
+```bash
+streamlit run bitcoin_app.py
+```
+
+---
+
+## 📦 Requirements
+
+Contents of `requirements.txt`:
+
+```txt
+streamlit
+pandas
+numpy
+plotly
+```
+
+You may update it with:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+## 🧪 Features in the Dashboard
+
+✅ Filter by **classification** (Fear, Greed, etc.)
+✅ Filter by **side** (BUY/SELL)
+✅ View **sentiment timeline & histogram**
+✅ View **PNL simulation** based on strategy
+✅ View **raw data table** with classification
+✅ Dark-themed minimalist UI with Plotly graphs
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Streamlit Cloud**:
+
+### Deployment Steps
+
+1. Push code to a public GitHub repository
+2. Login to [Streamlit Cloud](https://streamlit.io/cloud)
+3. Click **New App**
+4. Connect your repo → Set `bitcoin_app.py` as the main file
+5. Add `requirements.txt` for dependency installation
+6. Deploy!
+
+---
+
+---
+
+## 🔗 Live Demo
+
+👉 **[Click to View the Deployed App](https://bitcoin-fear-greed-app.streamlit.app/)**
+📄 Uploaded Dataset: `merged_bitcoin_trades_sentiment (2).csv`
+
+---
+## 📚 Key Files Explained
+
+| File                                      | Description                                    |
+| ----------------------------------------- | ---------------------------------------------- |
+| `bitcoin_app.py`                          | Core Streamlit app logic                       |
+| `Bitcoin_Analysis (2).ipynb`              | Full analysis, EDA, data merging               |
+| `merged_bitcoin_trades_sentiment (2).csv` | Final dataset with sentiment-classified trades |
+| `Charts/`                                 | Visual output images used in app/report        |
+| `requirements.txt`                        | Project dependencies                           |
+| `README.md`                               | Project summary and usage guide                |
+
+---
+
+## 📈 Strategy Logic (Simplified)
+
+The app supports a naive strategy simulation:
+
+> **BUY during Fear** → **SELL during Greed**
+
+This uses filtered trade data based on sentiment classification and shows hypothetical profits based on these entry/exit conditions.
+
+---
+
+## 🙌 Acknowledgements
+
+* [Streamlit](https://streamlit.io/) for app framework
+* [Plotly](https://plotly.com/) for interactive charts
+* [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) for sentiment data
+
+
+
