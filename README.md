@@ -195,11 +195,10 @@ Here is a **professional README.md** for your Bitcoin Fear-Greed Streamlit dashb
 Bitcoin-analysis/
 │
 ├── 📂 Charts/                             # Saved visualizations (PNL, Heatmaps, etc.)
-├── 📄 bitcoin_app.py                      # Streamlit app entry point
-├── 📄 Bitcoin_Analysis (2).ipynb          # Jupyter notebook for EDA and model logic
-├── 📄 merged_bitcoin_trades_sentiment (2).csv  # Main dataset (combined)
-├── 📄 fear_greed_index.csv                # Raw Fear-Greed Index data
-├── 📄 historical_data.csv                 # Historical Bitcoin OHLCV + volume
+├── 📂 Csv/                             # Saved visualizations (PNL, Heatmaps, etc.)
+├──  bitcoin_app.py                      # Streamlit app entry point
+├── 📄 Bitcoin_Analysis (2).ipynb          # Jupyter notebook 
+├── 📄 Report.pdf                          # Report
 ├── 📄 requirements.txt                    # Python dependencies
 ├── 📄 .gitignore
 ├── 📄 LICENSE
